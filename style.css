@@ -1,0 +1,149 @@
+:root {
+  --bg-dark: #0f0f10;
+  --text-light: #f4f4f4;
+  --accent: #9b5de5;
+  --accent2: #f15bb5;
+  --gradient: linear-gradient(135deg, #9b5de5, #f15bb5);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+header.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(15, 15, 16, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.logo { height: 40px; }
+
+nav a {
+  margin-left: 2rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover { color: var(--accent2); }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 4rem 4rem;
+  min-height: 100vh;
+}
+
+.hero-text { flex: 1; max-width: 600px; }
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  background: var(--gradient);
+  background-clip: text;              /* Standard property */
+  -webkit-background-clip: text;      /* Vendor prefix for Safari/Chrome */
+  color: transparent;                 /* Fallback for browsers that support background-clip */
+  -webkit-text-fill-color: transparent; /* Safari/Chrome text fill */
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: var(--gradient);
+  color: white;
+}
+
+.btn.secondary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  margin-left: 1rem;
+}
+
+.btn:hover { transform: scale(1.05); }
+
+.features {
+  text-align: center;
+  padding: 6rem 4rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover { transform: translateY(-6px); }
+
+.vision {
+  text-align: center;
+  padding: 6rem 4rem;
+}
+
+.vision-img {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 3rem;
+  border-radius: 16px;
+}
+
+.contact {
+  text-align: center;
+  padding: 6rem 4rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+.contact input {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.9rem;
+}

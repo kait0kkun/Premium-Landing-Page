@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Simplicity</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Import Map to resolve @supabase/supabase-js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/+esm"
+      }
+    }
+  </script>
+  
+  <script type="module" src="supabase.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <img src="assets/logo.png" class="logo" alt="Logo">
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#vision">Vision</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Design Meets Clarity.</h1>
+      <p>Experience a landing page that redefines minimalism — powerful, fast, and visually poetic.</p>
+      <div class="hero-buttons">
+        <a href="#features" class="btn primary">Discover</a>
+        <a href="#contact" class="btn secondary">Get Started</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/background.png" alt="Artistic Abstract" />
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Why This Stands Out</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>⚡ Speed</h3>
+        <p>Optimized to load in under 1 second with modern code and zero bloat.</p>
+      </div>
+      <div class="feature">
+        <h3>🎨 Design</h3>
+        <p>Handcrafted gradient layers and typography inspired by editorial art.</p>
+      </div>
+      <div class="feature">
+        <h3>💡 Simplicity</h3>
+        <p>Minimal yet expressive — every pixel earns its place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision" class="vision">
+    <h2>The Vision</h2>
+    <p>Built for creators who believe digital design should feel like art — fluid, intentional, and inspiring.</p>
+    <img src="assets/vision.png" alt="Vision Mockup" class="vision-img">
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Join the Experience</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <button type="submit" class="btn primary">Request Invite</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> The Art of Simplicity. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
